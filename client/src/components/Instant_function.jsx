@@ -11,6 +11,7 @@ console.log(demand_amount,loantime);
 const transaction = await contract.instant(demand_amount,loantime);
 await transaction.wait();
 console.log("transaction is done");
+alert("someone has raised a demand")
 
 };
 

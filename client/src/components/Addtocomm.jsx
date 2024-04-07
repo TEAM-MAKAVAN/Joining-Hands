@@ -21,7 +21,7 @@ const handleAddtocomm= async(event)=>{
 
 <input id="name" placeholder="enter your name" />
 <input id="age" placeholder="enter your age"/>
-<button >Submit</button>
+<button >Add Me to Community</button>
 
 </form>
 

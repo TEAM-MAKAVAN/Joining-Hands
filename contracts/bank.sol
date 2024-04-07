@@ -87,9 +87,9 @@ function extra_trnc( ) public view returns(uint256) {
  }
 
 
-uint havetopay_new;
+uint havetopay_new_variable;
 function HaveToPay()  public {
-  havetopay_new = (demandamount/me_array.length)+extra_cost_frmEach();  
+  havetopay_new_variable = (demandamount/me_array.length)+extra_cost_frmEach();  
 }
  
  uint256 time4=time3+345600;
@@ -172,6 +172,12 @@ uint256 eachAmount;
 
 function Each() public  {
  eachAmount = Repay_Amount/me_array.length;
+ }
+havetopay_new()
+ function   public view returns (uint){
+    
+    return havetopay_new_variable;
+   
  }
 
 function thankYou() public {

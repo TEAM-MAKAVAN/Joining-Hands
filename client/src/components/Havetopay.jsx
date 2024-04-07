@@ -1,26 +1,28 @@
-import { ethers } from "ethers";
-const Havetopay = ({state})=>{
-const handleHavetopay = async(event)=>{
-    event.preventDefault();
-    const {contract} = state;
-    const address =document.querySelector("#address").value;
-   
-    console.log(address);
-    
-    //const amount = { value: ethers.utils.parseEther("0.001") };
-    const transaction = await contract.HaveToPay();
-    await transaction.wait();
-    console.log("transaction is done");
-    
+import { useState, useEffect } from "react";
+const Havatopay = ({ state }) => {
+  const [memos, setMemos] = useState([]);
+  const { contract } = state;
+
+  useEffect(() => {
+    const fetchMemos = async () => {
+      const newMemos = await contract.havetopay_new();
+      setMemos(newMemos);
     };
 
+    if (contract) {
+      fetchMemos();
+    }
+  }, [contract, setMemos]); // Added setMemos to the dependency array
 
-    return<>
+  return (
+    <div className="container-fluid">
+      {memos.map((memo, index) => ( // Added 'index' as a key for each item
+        <div key={index}>
+          {memo}
+        </div>
+      ))}
+    </div>
+  );
+};
 
-<button id="address" onClick={handleHavetopay}>HAVE TO PAY</button>
-
-
-
-    </>
-}
-    export default Havetopay;
+export default Havatopay;

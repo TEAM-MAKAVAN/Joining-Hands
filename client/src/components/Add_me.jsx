@@ -20,7 +20,7 @@ const handleAdd_me = async(event)=>{
 <form onSubmit={handleAdd_me}>
 
 <input id="address" placeholder="enter your wallet address" />
-<button >Submit</button>
+<button onClick={handleAdd_me} >Add Me</button>
 
 </form>
 
