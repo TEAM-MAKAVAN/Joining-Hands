@@ -1,0 +1,110 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\anmol\\OneDrive\\Desktop\\blockchain_hackslash\\New folder (2)\\contracts\\parking.sol": {
+      "lastModificationDate": 1709404566967,
+      "contentHash": "36c583c4a9cec4fd5a47aa5f49719990",
+      "sourceName": "contracts/parking.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.9.0"
+      ],
+      "artifacts": [
+        "parking"
+      ]
+    },
+    "C:\\Users\\anmol\\OneDrive\\Desktop\\New folder (2)\\contracts\\parking.sol": {
+      "lastModificationDate": 1709404566967,
+      "contentHash": "36c583c4a9cec4fd5a47aa5f49719990",
+      "sourceName": "contracts/parking.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.9.0"
+      ],
+      "artifacts": [
+        "parking"
+      ]
+    },
+    "C:\\Users\\anmol\\OneDrive\\Desktop\\New folder (2)\\contracts\\bank.sol": {
+      "lastModificationDate": 1712472900585,
+      "contentHash": "f55aa0b7d9b65354999748b65bb42506",
+      "sourceName": "contracts/bank.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.5"
+      ],
+      "artifacts": [
+        "bank"
+      ]
+    }
+  }
+}
