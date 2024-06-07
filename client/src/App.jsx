@@ -14,7 +14,7 @@ import Intrest_amount from "./components/Intrest_amount";
 import ThankYou from "./components/ThankYou";
 import Transfer from "./components/Transfer";
 import Each from "./components/Each";
-import Havetopay from "./components/Havetopay";
+
 //import Havetopay_alert from './components/Havetopay_alert';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
   const [account, setAccount] = useState("Not connected");
   useEffect(() => {
     const template = async () => {
-      const contractAddres = "0xa7dbdB074DB451C86bAd98bf3F832Cb43e430D09";
+      const contractAddres = "0xC7fd8225cFbD0faD408C480aBf812E0c0Abd851e";
       const contractABI = abi.abi;
 
       try {

@@ -173,12 +173,7 @@ uint256 eachAmount;
 function Each() public  {
  eachAmount = Repay_Amount/me_array.length;
  }
-havetopay_new()
- function   public view returns (uint){
-    
-    return havetopay_new_variable;
-   
- }
+
 
 function thankYou() public {
     while(i<me_array.length){
