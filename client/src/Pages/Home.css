@@ -1,0 +1,43 @@
+/* src/pages/Home.css */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
+  transform: translateY(50px);
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+/* .from-left {
+  transform: translateX(100%);
+} */
+
+.from-right {
+  transform: translateX(100%);
+}
+
+.text-container {
+  margin-bottom: 4rem;
+}
+
+body.loaded .home-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.loaded .from-left {
+  transform: translateX(0);
+}
+
+body.loaded .from-right {
+  transform: translateX(0);
+}
