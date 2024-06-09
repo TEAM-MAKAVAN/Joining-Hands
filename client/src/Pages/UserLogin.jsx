@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate , useOutletContext} from 'react-router-dom';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 const Login = () => {
   const [formData, setFormData] = useState({
     usernameOrEmail: '',
@@ -9,6 +10,8 @@ const Login = () => {
 
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useOutletContext(); // Use context to access setIsLoggedIn
+ 
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -37,7 +40,9 @@ const Login = () => {
       console.log('Success:', data);
 
       // Redirect to the user-access page on successful login
+      setIsLoggedIn(true);
       navigate('/user-access');
+      
     } catch (error) {
       console.error('Error:', error);
       setError('Login failed. Please check your credentials and try again.');
@@ -80,9 +85,23 @@ const Login = () => {
               Login
             </button>
           </form>
+          <p className='pl-44 pt-3'>or</p>
+        <div className=' pl-20 pt-6'> <GoogleLogin
+  onSuccess={credentialResponse => {
+   const credentialResponseDecoded=jwtDecode(credentialResponse.credential);
+   console.log(credentialResponseDecoded);
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+     /></div> 
         </div>
+       
       </main>
+      
+      
     </div>
+    
   );
 }
 

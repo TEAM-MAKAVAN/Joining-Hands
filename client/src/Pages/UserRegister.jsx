@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
+  const notify = () => toast("User Registered Successfully!");
   const [formData, setFormData] = useState({
     username: '',
     fullName: '',
@@ -38,7 +41,7 @@ const Register = () => {
 
       // Handle successful registration (e.g., redirect to login page)
 
-      navigate('/user')
+     setTimeout(navigate('/user'),5000) 
     } catch (error) {
       console.error('Error:', error);
       // Handle errors (e.g., show error message to the user)
@@ -47,6 +50,7 @@ const Register = () => {
 
   return (
     <div>
+      <ToastContainer />
       <main className="bg-gray-100 min-h-screen flex items-center justify-center py-10">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
           <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
@@ -95,13 +99,14 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
-            <button
+            <button onClick={notify}
               type="submit"
               className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300"
             >
               Register
             </button>
           </form>
+          <p className='pl-16'>Already have an Account? <a className='text-blue-600' href="/user">Login</a></p>
         </div>
       </main>
     </div>

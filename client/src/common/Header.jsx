@@ -1,8 +1,12 @@
 
 import React from 'react';
 
-const Header = () => {
+
+const Header = ({ isLoggedIn }) => {
+  
   return (
+    <div>
+      
     <header className="bg-gray-800 text-white">
       <div className="container mx-auto flex justify-between items-center py-4">
         {/* Left side: Logo and Title */}
@@ -12,7 +16,7 @@ const Header = () => {
         </div>
         
         {/* Center: Navigation Links */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-8 pr-10">
           <a href="/" className="transition-colors duration-300 hover:text-gray-400">Home</a>
           <a href="/about" className="transition-colors duration-300 hover:text-gray-400">About</a>
           <a href="/user" className="transition-colors duration-300 hover:text-gray-400">User</a>
@@ -22,11 +26,12 @@ const Header = () => {
         {/* Right side: Get Started Button */}
         <div className="hidden md:block">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-transform duration-300 hover:scale-110 pr-8">
-            <a href="/register">Get Started</a>
+            <a href="/register"> {isLoggedIn ? 'Logout' : 'Sign Up'}</a>
           </button>
         </div>
       </div>
     </header>
+    </div>
   );
 };
 

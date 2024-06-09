@@ -30,27 +30,9 @@ const Footer = () => {
             <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Privacy Policy</li>
           </ul>
         </div>
-        {/* <div>
-          <h3 className="text-lg font-bold mb-2">OUR WORK</h3>
-          <ul>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Education</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Health</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Livelihood</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Women Empowerment</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Disaster Response</li>
-          </ul>
-        </div> */}
-        {/* <div>
-          <h3 className="text-lg font-bold mb-2">CAMPAIGNS</h3>
-          <ul>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Shiksha Na Ruke</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Health Cannot Wait</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">She Can Fly</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Swabhiman</li>
-            <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Tayyari Kal Ki</li>
-          </ul>
-        </div> */}
-        <div>
+        
+      
+        <div className='ml-20 '>
           <h3 className="text-lg font-bold mb-2">GET INVOLVED</h3>
           <ul>
             <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Individual Support</li>
@@ -60,8 +42,8 @@ const Footer = () => {
             <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Careers</li>
           </ul>
         </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2">RESOURCE CENTRE</h3>
+        <div className='ml-20'>
+          <h3 className="text-lg font-bold mb-2 ">RESOURCE CENTRE</h3>
           <ul>
             <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Annual Report</li>
             <li className="mb-1 hover:text-gray-400 transition-colors duration-300">Newsletter</li>
@@ -86,6 +68,7 @@ const Footer = () => {
           <a href="#" className="hover:text-gray-400 transition-colors duration-300"><FaLinkedinIn /></a>
         </div>
       </div>
+      <p className='pl-20'>&copy; 2024 Joining Hands for Rising Heads. All rights reserved.</p>
     </footer>
   );
 };

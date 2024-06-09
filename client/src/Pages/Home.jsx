@@ -1,16 +1,16 @@
 
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './Home.css';
+import ImageCarousel from './ImageCrousel';
 
 const Home = () => {
   return (
-    <div
-    className="bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-gray-600"
-      style={{ backgroundImage: "url('https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg')" }}
-
-    >
-      
+    <div>
+       
+            <main className="mt-10">
+                <ImageCarousel />
+            </main>
       <main className="bg-gray-100 min-h-screen py-10">
         <section className="container mx-auto px-6">
           <div className="flex flex-col items-center space-y-10">
@@ -20,7 +20,7 @@ const Home = () => {
               </div> */}
               <div className="text-container">
                 <h2 className="text-3xl font-bold mb-2">Welcome to Our Decentralized Loan Application</h2>
-                <p className="text-lg text-white">Join us in empowering financial freedom. Our platform offers secure and transparent loan services, ensuring that you have control over your financial decisions.</p>
+                <p className="text-lg text-gray-700">Join us in empowering financial freedom. Our platform offers secure and transparent loan services, ensuring that you have control over your financial decisions.</p>
               </div>
             </div>
             <div className="home-section">
@@ -35,7 +35,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-      
+      <Link to={"/users"}>All Users</Link>
     </div>
   );
 };

@@ -71,25 +71,18 @@ const About = () => {
            
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg opacity-0 animate-from-top">
-            <h3 className="text-2xl font-bold mb-4">Step 10: Repayment</h3>
-            <p className="text-gray-700">Repayment of the loan will be as per the agreed terms. Ensure timely payments to maintain a good credit score.</p>
+            <h3 className="text-2xl font-bold mb-4">Step 10:Borrower's Payment </h3>
+            <p className="text-gray-700"> After Interest Calculation total repayable amount will be informed to the borrower. Borrower will pay the repayable amount to Contract Balance. </p>
            
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg opacity-0 animate-from-top">
-            <h3 className="text-2xl font-bold mb-4">Step 11: Repayment</h3>
-            <p className="text-gray-700">Repayment of the loan will be as per the agreed terms. Ensure timely payments to maintain a good credit score.</p>
+            <h3 className="text-2xl font-bold mb-4">Step 11: Final Repayment</h3>
+            <p className="text-gray-700">Finally After receiving money the Manager will pay to the
+            lenders with their Rewarded amount.</p>
             
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg opacity-0 animate-from-top">
-            <h3 className="text-2xl font-bold mb-4">Step 12: Repayment</h3>
-            <p className="text-gray-700">Repayment of the loan will be as per the agreed terms. Ensure timely payments to maintain a good credit score.</p>
-            
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg opacity-0 animate-from-top">
-            <h3 className="text-2xl font-bold mb-4">Step 13: Repayment</h3>
-            <p className="text-gray-700">Repayment of the loan will be as per the agreed terms. Ensure timely payments to maintain a good credit score.</p>
-            
-          </div>
+          
+          
         </div>
       </div>
     </main>
