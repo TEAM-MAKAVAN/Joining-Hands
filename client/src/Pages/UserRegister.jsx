@@ -41,7 +41,7 @@ const Register = () => {
 
       // Handle successful registration (e.g., redirect to login page)
 
-     setTimeout(navigate('/user'),5000) 
+     setTimeout(()=>navigate('/user'),5000) 
     } catch (error) {
       console.error('Error:', error);
       // Handle errors (e.g., show error message to the user)

@@ -35,7 +35,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-      <Link to={"/users"}>All Users</Link>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-transform duration-300 hover:scale-110 pr-8 mx-50"><Link to={"/users"}>All Users</Link></button>
     </div>
   );
 };
