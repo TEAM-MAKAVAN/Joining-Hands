@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../AuthContext";
+
 const ManagerLogin = () => {
+  const { login } = useContext(AuthContext);
   const notify = () => toast();
   const [formData, setFormData] = useState({
-    identifier: "", // Will be either email or username must be entered to login
+    identifier: "",
     password: "",
   });
 
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useOutletContext(); // Use context to access setIsLoggedIn
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -26,14 +28,13 @@ const ManagerLogin = () => {
 
     const { identifier, password } = formData;
 
-    // Determine if the identifier is an email or username
     const payload = identifier.includes("@")
       ? { email: identifier, password }
       : { username: identifier, password };
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/admins//login-admin",
+        "http://localhost:8000/api/v1/admins/login-admin",
         {
           method: "POST",
           headers: {
@@ -45,19 +46,15 @@ const ManagerLogin = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        
         throw new Error(errorData.message || "Network response was not ok");
-        
       }
 
       const data = await response.json();
       console.log("Success:", data);
-      
 
-      // Redirect to the manager-access page on successful login
-      setIsLoggedIn(true);
-      
-      setTimeout(()=>navigate('/admin-access'),3000) 
+      // Redirect to the admin-access page on successful login
+      login();
+      setTimeout(() => navigate('/admin-access'), 3000);
     } catch (error) {
       console.error("Error:", error);
       setError("Login failed. Please check your credentials and try again.");
@@ -66,7 +63,7 @@ const ManagerLogin = () => {
 
   return (
     <div>
-       <ToastContainer />
+      <ToastContainer />
       <main className="bg-gray-100 min-h-screen flex items-center justify-center py-10">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
           <h2 className="text-2xl font-bold mb-6 text-center">Manager Login</h2>

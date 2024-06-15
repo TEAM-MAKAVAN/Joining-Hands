@@ -20,7 +20,7 @@ const Header = ({ isLoggedIn }) => {
           <a href="/" className="transition-colors duration-300 hover:text-gray-400">Home</a>
           <a href="/about" className="transition-colors duration-300 hover:text-gray-400">About</a>
           <a href="/user" className="transition-colors duration-300 hover:text-gray-400">User</a>
-          <a href="/manager" className="transition-colors duration-300 hover:text-gray-400">Manager</a>
+          <a href="/login" className="transition-colors duration-300 hover:text-gray-400">Manager</a>
         </nav>
         
         {/* Right side: Get Started Button */}
