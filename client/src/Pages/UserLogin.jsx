@@ -114,7 +114,7 @@ import {jwtDecode }from 'jwt-decode';
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    identifier: '', // Will be either email or username
+    identifier: '', // Will be either email or username must be entered to login
     password: ''
   });
 
