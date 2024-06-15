@@ -17,7 +17,7 @@ const handleRepay_amount = async(event)=>{
 
     return<>
 
-<button id="address" onClick={handleRepay_amount}>REPAY AMOUNT</button>
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-7 rounded" onClick={handleRepay_amount}>REPAY AMOUNT</button>
 
 
 

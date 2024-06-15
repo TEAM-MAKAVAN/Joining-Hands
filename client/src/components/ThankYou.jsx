@@ -17,7 +17,7 @@ const handleThankYou = async(event)=>{
 
     return<>
 
-<button id="address" onClick={handleThankYou}>PAY LENDERS</button>
+<button id="address"  className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-10 rounded" onClick={handleThankYou}>PAY LENDERS</button>
 
 
 

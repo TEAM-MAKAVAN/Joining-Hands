@@ -28,10 +28,15 @@ const handledeposit = async(event)=>{
 
 <form onSubmit={handledeposit}>
 
-<input id="amount"  placeholder="PAY TO CONTRACT" />
-{/* <button  onClick ={CreateValue(amount1)}>CREATE VALUE</button> */}
-<button  onClick ={handledeposit}>PAY</button>
+<div className="flex justify-center mb-4">
+    <input
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        placeholder="Pay To Contract"/>
+    <button onClick ={handledeposit} className="bg-green-500 text-white font-bold py-2 px-4 rounded ml-2">Pay</button>
+</div>
 
+{/* <button  onClick ={CreateValue(amount1)}>CREATE VALUE</button> */}
 
 
 </form>

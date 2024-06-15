@@ -17,7 +17,7 @@ const handleTransfer = async(event)=>{
 
     return<>
 
-<button id="address" onClick={handleTransfer}>TRANSFER</button>
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-12 rounded" onClick={handleTransfer}>TRANSFER</button>
 
 
 

@@ -19,9 +19,15 @@ const handleAddtocomm= async(event)=>{
 
 <form onSubmit={handleAddtocomm}>
 
-<input id="name" placeholder="enter your name" />
-<input id="age" placeholder="enter your age"/>
-<button >Add Me to Community</button>
+<div className="mb-4">
+    <label className="block text-gray-700 text-left font-bold mb-2" htmlFor="name">Enter Your Name</label>
+        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-non focus:shadow-outline" id="name" type="text" placeholder="Enter your name"/>
+</div>
+<div id="age" className="mb-4">
+    <label className="block text-gray-700 text-left font-bold mb-2" htmlFor="age">Enter your Age</label>
+    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="age" type="text" placeholder="Enter your age"/>
+</div>
+<button className="bg-green-600 hover:bg-green-800 text-white text-center font-bold py-4 px-12 rounded" >Add Me to Community</button>
 
 </form>
 

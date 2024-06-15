@@ -11,16 +11,10 @@ const handleEach = async(event)=>{
     const transaction = await contract.Each();
     await transaction.wait();
     console.log("transaction is done");
-    
     };
 
-
     return<>
-
-<button id="address" onClick={handleEach}>AmtPayableToEach</button>
-
-
-
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-14 rounded" onClick={handleEach}>PAY NOW</button>
     </>
 }
     export default Each;

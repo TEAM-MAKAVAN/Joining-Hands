@@ -18,7 +18,7 @@ const handleFinaltime = async(event)=>{
 
     return<>
 
-<button id="address" onClick={handleFinaltime}>Final TIME</button>
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-12 rounded" onClick={handleFinaltime}>Final TIME</button>
 
 
 

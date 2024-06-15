@@ -17,7 +17,7 @@ const handleIntrest_amount = async(event)=>{
 
     return<>
 
-<button id="address" onClick={handleIntrest_amount}>INTEREST AMOUNT</button>
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-4 rounded" onClick={handleIntrest_amount}>INTEREST AMOUNT</button>
 
 
 

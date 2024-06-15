@@ -1,11 +1,10 @@
-
 import React from 'react';
 
 
 const Header = ({ isLoggedIn }) => {
   
   return (
-    <div>
+    <div className='Container'>
       
     <header className="bg-gray-800 text-white">
       <div className="container mx-auto flex justify-between items-center py-4">

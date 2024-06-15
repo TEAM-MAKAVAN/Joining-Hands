@@ -17,7 +17,7 @@ const handleCalctime = async(event)=>{
 
     return<>
 
-<button id="address" placeholder="enter your wallet address" onClick={handleCalctime}>CALCULATE TIME</button>
+<button id="address" className="bg-green-600 hover:bg-green-800 text-white font-bold py-4 px-6 rounded" placeholder="enter your wallet address" onClick={handleCalctime}>CALCULATE TIME</button>
 
 
 

@@ -1,51 +1,49 @@
-import React, { useState } from 'react';
-import { useNavigate , useOutletContext} from 'react-router-dom';
-import { GoogleLogin } from '@react-oauth/google';
+import React, { useState } from "react";
+import { useNavigate, useOutletContext } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 const Login = () => {
   const [formData, setFormData] = useState({
-    usernameOrEmail: '',
-    password: ''
+    usernameOrEmail: "",
+    password: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const { setIsLoggedIn } = useOutletContext(); // Use context to access setIsLoggedIn
- 
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [id]: value
+      [id]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/v1/users/login', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8000/api/v1/users/login", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
 
       const data = await response.json();
-      console.log('Success:', data);
+      console.log("Success:", data);
 
       // Redirect to the user-access page on successful login
       setIsLoggedIn(true);
-      navigate('/user-access');
-      
+      navigate("/user-access");
     } catch (error) {
-      console.error('Error:', error);
-      setError('Login failed. Please check your credentials and try again.');
+      console.error("Error:", error);
+      setError("Login failed. Please check your credentials and try again.");
     }
   };
 
@@ -57,7 +55,12 @@ const Login = () => {
           {error && <p className="text-red-500 text-center mb-4">{error}</p>}
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="usernameOrEmail" className="block text-gray-700 mb-2">Username or Email</label>
+              <label
+                htmlFor="usernameOrEmail"
+                className="block text-gray-700 mb-2"
+              >
+                Username or Email
+              </label>
               <input
                 type="text"
                 id="usernameOrEmail"
@@ -68,7 +71,9 @@ const Login = () => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="password" className="block text-gray-700 mb-2">Password</label>
+              <label htmlFor="password" className="block text-gray-700 mb-2">
+                Password
+              </label>
               <input
                 type="password"
                 id="password"
@@ -85,24 +90,25 @@ const Login = () => {
               Login
             </button>
           </form>
-          <p className='pl-44 pt-3'>or</p>
-        <div className=' pl-20 pt-6'> <GoogleLogin
-  onSuccess={credentialResponse => {
-   const credentialResponseDecoded=jwtDecode(credentialResponse.credential);
-   console.log(credentialResponseDecoded);
-  }}
-  onError={() => {
-    console.log('Login Failed');
-  }}
-     /></div> 
+          <p className="pl-44 pt-3">or</p>
+          <div className=" pl-20 pt-6">
+            {" "}
+            <GoogleLogin
+              onSuccess={(credentialResponse) => {
+                const credentialResponseDecoded = jwtDecode(
+                  credentialResponse.credential
+                );
+                console.log(credentialResponseDecoded);
+              }}
+              onError={() => {
+                console.log("Login Failed");
+              }}
+            />
+          </div>
         </div>
-       
       </main>
-      
-      
     </div>
-    
   );
-}
+};
 
 export default Login;

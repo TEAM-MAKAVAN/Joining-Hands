@@ -1,4 +1,8 @@
 /* src/pages/Home.css */
+.main{
+  background-color: rgb(102, 151, 243);
+}
+
 .home-section {
   display: flex;
   align-items: center;

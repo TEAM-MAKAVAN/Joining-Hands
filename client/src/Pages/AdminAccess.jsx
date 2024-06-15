@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from 'react';
 import abi from "../contractJson/bank.json";
 import { ethers } from "ethers";
 import Instant_function from "../components/Instant_function";
@@ -58,47 +59,51 @@ function AdminAccess(){
   }, []);
 
   return(
-    <>
-    <h1 className="heading"> Manager Interface</h1>
-        <div className='manager'>
+    <div className="min-h-screen bg-blue-500 flex flex-col items-center p-6">
+      <header className="w-full bg-blue-900 text-white text-center py-4 mb-8">
+        <h1 className="text-4xl font-bold">Manager Interface</h1>
+      </header>
 
-        <div className="display-btn">
-        <h3 className="subheading"> Transfer Money from Contract Balance to Borrower's Account and also start Time </h3>
-     <Transfer state={state}></Transfer>
+      <div className="space-y-12 text-white text-center">
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>Transfer Money from Contract Balance to Borrower's Account and also start Time</span>
+          <Transfer state={state}></Transfer>
         </div>
-     <div className="display-btn">
-     <h3 className="subheading"> If Borrower requested  to repay the amount  stop loan timer </h3>
-     <Finaltime state={state}></Finaltime>
-     </div>
      
-     <div className="display-btn">
-     <h3 className="subheading"> calculate Total loan Time</h3>
-     <Calctime state={state}></Calctime>
-     </div>
-     
-     <div className="display-btn">
-     <h3 className="subheading"> claculate Interest Amount </h3>
-     <Intrest_amount state={state}></Intrest_amount>
-     </div>
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>If Borrower requested to repay the amount stop loan timer</span>
+          <Finaltime state={state}></Finaltime>
+        </div>
 
-     <div className="display-btn">
-     <h3 className="subheading">calculate Total Repayable Amount By the Borrower( with Interest) </h3>
-     <Repay_amount state={state}></Repay_amount>
-     </div>
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>Calculate Total loan Time</span>
+          <Calctime state={state}></Calctime>
+        </div>
+
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>Calculate Interest Amount</span>
+          <Intrest_amount state={state}></Intrest_amount>
+        </div>
+
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>Calculate Total Repayable Amount By the Borrower (with Interest)</span>
+          <Repay_amount state={state}></Repay_amount>
+        </div>
+
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>If money is received from Borrower calculate payable amount to each lender with interest rewards</span>
+          <Each state={state}></Each>
+        </div>
+        <div className="flex justify-between items-center space-x-4">
+          <span className='text-2xl'>Final call! Pay to the lenders</span>
+          <ThankYou state={state}></ThankYou>
+        </div>
+      </div>
      
-     <div className="display-btn">
-     <h3 className="subheading"> If money is received from Borrower calculate  payable amount to each lender with interest rewards</h3>
-     <Each state={state}></Each>
      </div>
-     
-     <div className="display-btn">
-     <h3 className="subheading">Final call! Pay to the lenders</h3>
-     <ThankYou state={state}></ThankYou>
-     </div>
-     
-     </div>
-    </>
   )
 }
 
 export default AdminAccess;
+
+

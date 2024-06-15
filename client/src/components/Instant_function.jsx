@@ -19,9 +19,21 @@ return <>
 
 <form onSubmit={handleInstant}>
     
-<input id="demand_amount"  placeholder="DEMAND AMOUNT"></input>
-<input id="loantime"  placeholder="LOAN TIME"></input>
-<button >complete</button>
+<label className="block text-gray-700 text-left font-bold mb-2" htmlFor="amount">Enter the Demanded Amount</label>
+    <input
+    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+    id="amount"
+    type="text"
+    placeholder="Demand Amount"
+    />
+    <label className="block text-gray-700 text-left font-bold mb-2" htmlFor="time">Enter the loan time period</label>
+    <input
+    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4"
+    id="time"
+    type="text"
+    placeholder="Loan Time"
+    />
+ <button className="bg-green-500 text-white font-bold py-2 px-4 rounded">Submit</button>
 
 </form>
 
